@@ -20,13 +20,63 @@ let latclocal = playerlocal[1]
 let aalocal = playerlocal[2]
 let latblocal = playerlocal[3]
 let zagblocal = playerlocal[4]
-
+let cls = [`velocidade`,`tecnica`,`forca`,`nenhuma`];
 
 document.getElementById("zagc1").src = zagcplayer;
+if(zagctype[zagclocal]==`tecnica`){
+    document.getElementById("zagc1").classList.remove(...cls)
+    document.getElementById("zagc1").classList.add('tecnica');
+}if(zagctype[zagclocal]==`forca`){
+    document.getElementById("zagc1").classList.remove(...cls)
+    document.getElementById("zagc1").classList.add('forca');
+}if(zagctype[zagclocal]==`velocidade`){
+    document.getElementById("zagc1").classList.remove(...cls)
+    document.getElementById("zagc1").classList.add('velocidade');
+}
 document.getElementById("latc1").src = latcplayer;
+if(latctype[latclocal]==`tecnica`){
+    document.getElementById("latc1").classList.remove(...cls)
+    document.getElementById("latc1").classList.add('tecnica');
+}if(latctype[latclocal]==`forca`){
+    document.getElementById("latc1").classList.remove(...cls)
+    document.getElementById("latc1").classList.add('forca');
+}if(latctype[latclocal]==`velocidade`){
+    document.getElementById("latc1").classList.remove(...cls)
+    document.getElementById("latc1").classList.add('velocidade');
+}
 document.getElementById("aa1").src = aaplayer;
+if(aatype[aalocal]==`tecnica`){
+    document.getElementById("aa1").classList.remove(...cls)
+    document.getElementById("aa1").classList.add('tecnica');
+}if(aatype[aalocal]==`forca`){
+    document.getElementById("aa1").classList.remove(...cls)
+    document.getElementById("aa1").classList.add('forca');
+}if(aatype[aalocal]==`velocidade`){
+    document.getElementById("aa1").classList.remove(...cls)
+    document.getElementById("aa1").classList.add('velocidade');
+}
 document.getElementById("latb1").src = latbplayer;
+if(latbtype[latblocal]==`tecnica`){
+    document.getElementById("latb1").classList.remove(...cls)
+    document.getElementById("latb1").classList.add('tecnica');
+}if(latbtype[latblocal]==`forca`){
+    document.getElementById("latb1").classList.remove(...cls)
+    document.getElementById("latb1").classList.add('forca');
+}if(latbtype[latblocal]==`velocidade`){
+    document.getElementById("latb1").classList.remove(...cls)
+    document.getElementById("latb1").classList.add('velocidade');
+}
 document.getElementById("zagb1").src = zagbplayer;
+if(zagbtype[zagblocal]==`tecnica`){
+    document.getElementById("zagb1").classList.remove(...cls)
+    document.getElementById("zagb1").classList.add('tecnica');
+}if(zagbtype[zagblocal]==`forca`){
+    document.getElementById("zagb1").classList.remove(...cls)
+    document.getElementById("zagb1").classList.add('forca');
+}if(zagbtype[zagblocal]==`velocidade`){
+    document.getElementById("zagb1").classList.remove(...cls)
+    document.getElementById("zagb1").classList.add('velocidade');
+}
 
 let dificuldade = 5;
 
@@ -107,6 +157,58 @@ document.getElementById("init").addEventListener("click", function(){
                 let randomzagb = parseInt(Math.random() * 3)+contadifi
                 timeoponente[4] = randomzagb
                 document.getElementById("zagb2").src = zagblist[randomzagb];
+
+                //mudaborda
+                if(zagbtype[randomzagb]==`tecnica`){
+                    document.getElementById("zagb2").classList.remove(...cls)
+                    document.getElementById("zagb2").classList.add('tecnica');
+                }if(zagbtype[randomzagb]==`forca`){
+                    document.getElementById("zagb2").classList.remove(...cls)
+                    document.getElementById("zagb2").classList.add('forca');
+                }if(zagbtype[randomzagb]==`velocidade`){
+                    document.getElementById("zagb2").classList.remove(...cls)
+                    document.getElementById("zagb2").classList.add('velocidade');
+                }
+                if(zagctype[randomzagc]==`tecnica`){
+                    document.getElementById("zagc2").classList.remove(...cls)
+                    document.getElementById("zagc2").classList.add('tecnica');
+                }if(zagctype[randomzagc]==`forca`){
+                    document.getElementById("zagc2").classList.remove(...cls)
+                    document.getElementById("zagc2").classList.add('forca');
+                }if(zagctype[randomzagc]==`velocidade`){
+                    document.getElementById("zagc2").classList.remove(...cls)
+                    document.getElementById("zagc2").classList.add('velocidade');
+                }
+                if(latbtype[randomlatb]==`tecnica`){
+                    document.getElementById("latb2").classList.remove(...cls)
+                    document.getElementById("latb2").classList.add('tecnica');
+                }if(latbtype[randomlatb]==`forca`){
+                    document.getElementById("latb2").classList.remove(...cls)
+                    document.getElementById("latb2").classList.add('forca');
+                }if(latbtype[randomlatb]==`velocidade`){
+                    document.getElementById("latb2").classList.remove(...cls)
+                    document.getElementById("latb2").classList.add('velocidade');
+                }
+                if(latctype[randomlatc]==`tecnica`){
+                    document.getElementById("latc2").classList.remove(...cls)
+                    document.getElementById("latc2").classList.add('tecnica');
+                }if(latctype[randomlatc]==`forca`){
+                    document.getElementById("latc2").classList.remove(...cls)
+                    document.getElementById("latc2").classList.add('forca');
+                }if(latctype[randomlatc]==`velocidade`){
+                    document.getElementById("latc2").classList.remove(...cls)
+                    document.getElementById("latc2").classList.add('velocidade');
+                }
+                if(aatype[randomaa]==`tecnica`){
+                    document.getElementById("aa2").classList.remove(...cls)
+                    document.getElementById("aa2").classList.add('tecnica');
+                }if(aatype[randomaa]==`forca`){
+                    document.getElementById("aa2").classList.remove(...cls)
+                    document.getElementById("aa2").classList.add('forca');
+                }if(aatype[randomaa]==`velocidade`){
+                    document.getElementById("aa2").classList.remove(...cls)
+                    document.getElementById("aa2").classList.add('velocidade');
+                }
     
                 //calcula inimigo
                 if(zagctype[randomzagc]==`velocidade`){

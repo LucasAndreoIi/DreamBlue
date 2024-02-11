@@ -160,19 +160,16 @@ footer{
 #zagc1, #zagc2, #latc1, #latc2{
     width: 50px;
     height: 50px;
-    border: 2px solid #8B8C89;
 }
 
 #g1, #g2, #aa1, #aa2{
     width: 50px;
     height: 50px;
-    border: 2px solid #8B8C89;
 }
 
 #zagb1, #zagb2, #latb1, #latb2{
     width: 50px;
     height: 50px;
-    border: 2px solid #8B8C89;
 }
 
 @media (max-width: 1200px) {
@@ -342,4 +339,20 @@ footer a{
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+}
+
+.nenhuma{
+    border: 2px solid #424242;
+}
+
+.forca{
+    border: 2px solid #881818;
+}
+
+.velocidade{
+    border: 2px solid #aa9c1d;
+}
+
+.tecnica{
+    border: 2px solid #234bb9;
 }
