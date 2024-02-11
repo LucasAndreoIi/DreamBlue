@@ -424,7 +424,7 @@ document.getElementById("init").addEventListener("click", function(){
         <p>MVP:</p><p id="entrosamento">${mvpname} ${golsmvp} Gols</p><br>
         <p>Reputação:</p><p id="rep">???</p><br>
         <p>Ganhos:</p><p id="cashmatch">${dinheiro}</p><br>
-        <button id="conc" class="botoes">Concluir</button>`
+        <a href="#mainindex"><button id="conc" class="botoes">Concluir</button></a>`
         document.getElementById("categorias").innerHTML = `
         <button id="facil" class="btnt">Fácil</button>
         <button id="medio" class="btnt">Médio</button>
