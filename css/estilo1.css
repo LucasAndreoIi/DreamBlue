@@ -332,3 +332,15 @@ footer{
     box-sizing: border-box;
     font-size: 13px;
 }
+
+footer{
+    padding: 5vh;
+    text-align: center;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
