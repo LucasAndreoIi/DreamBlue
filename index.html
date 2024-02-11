@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DreamBlue</title>
+    <link rel="stylesheet" href="css/estilo1.css">
+</head>
+<body>
+    <header id="cabecalho">
+        <img src="img/logodreamblue.png">
+        <nav>
+            <a href="index.html">Partida</a>
+            <a href="colecao.html">Coleção</a>
+            <a href="pacotes.html">Pacotes</a>
+            <a href="quests.html">Quests</a>
+            <a href="tutorial.html">Tutorial</a>
+        </nav>
+    </header>
+    <main id="mainindex">
+        <div id="secao1">
+            <div id="categorias">
+                <button id="facil" class="botoes">Fácil</button>
+                <button id="medio" class="botoes">Médio</button>
+                <button id="dificil" class="botoes">Difícil</button>
+            </div>
+            <button id="init" class="botoes">Começar</button>
+            <div id="campo">
+                <div id="campocima">
+                    <img src="img/jogadores/Time_1.png" id="zagc1">
+                    <img src="img/jogadores/Time_1.png"id="latc1">
+                    <img src="img/icones/interroga.png" id="latc2">
+                    <img src="img/icones/interroga.png" id="zagc2">
+                </div>
+                <div id="campomeio">
+                    <img src="img/jogadores/goleiro.jpg"id="g1">
+                    <img src="img/jogadores/Time_1.png"id="aa1">
+                    <img src="img/icones/interroga.png" id="aa2">
+                    <img src="img/jogadores/goleiro.jpg" id="g2">
+                </div>
+                <div id="campobaixo">
+                    <img src="img/jogadores/Time_1.png"id="zagb1">
+                    <img src="img/jogadores/Time_1.png"id="latb1">
+                    <img src="img/icones/interroga.png" id="latb2">
+                    <img src="img/icones/interroga.png" id="zagb2">
+                </div>
+            </div>
+            <div id="overall">
+                <div id="placar">0x0</div>
+                <div id="results">
+                </div>
+            </div>
+        </div>
+        <div id="secao2">
+            <div id="teamname"><input type="text" data-ls-module="charCounter" maxlength="16" placeholder="Nome do time(aperte enter para confirmar)" id="nometime"></div>
+            <img src="img/jogadores/goleiro.jpg" id="profilepic">
+            <div id="calcs">
+                <p>Ranking:</p><p id="ranking">.</p><p>Dinheiro:</p><p id="cash">.</p>
+                <p>Vitórias:</p><p id="wins">.</p><p>Derrotas:</p><p id="loses">.</p>  
+            </div>        
+        </div>
+    </main>
+    <footer>
+        
+    </footer>
+    <script src="js/bd.js"></script>
+    <script src="js/script01.js"></script>
+</body>
+</html>

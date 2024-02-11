@@ -1,0 +1,40 @@
+#maintutorial{
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+#bluelock{
+    text-decoration: none;
+    color: rgb(54, 54, 116);
+}
+
+#pagina{
+    text-decoration: none;
+    color: rgb(82, 57, 153);
+}
+
+#pagina:hover{
+    color: yellow;
+}
+
+
+#bluelock:hover{
+    color: yellow;
+}
+
+img{
+    width: 40vw;
+    max-height: 40vh;
+}
+
+p{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: black;
+    font-size: 4vh;
+    width: 50%;
+    margin-left: 25%;
+}
