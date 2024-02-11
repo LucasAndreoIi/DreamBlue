@@ -317,7 +317,7 @@ function abrepack(){
             }
         }      
     }
-    else if(pacotesjogador[index]==`<img src="img/pacotes/pack5.png" id="packcomprado0}">`){
+    else if(pacotesjogador[index]==`<img src="img/pacotes/pack5.png" id="packcomprado0">`){
         let random = parseInt(Math.random() * 100)
         if(random <= 20){
             let random2 = parseInt(Math.random() * 5)
