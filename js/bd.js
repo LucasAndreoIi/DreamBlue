@@ -1,6 +1,11 @@
 "use strict";
 
 //Script especifico para armazenar dados
+let questsplayer = [];
+let contagol = 0;
+let contavitf = 0;
+let contavitm = 0;
+let contavitd = 0;
 let contacardc = ['','','','',''];
 let contacardi = ['','','','',''];
 let contacardr = ['','','','',''];
@@ -109,4 +114,38 @@ if(sessionStorage.timelocal==null){
     sessionStorage.setItem("timelocal","")
     let timelocal = [0,0,0,0,0]
     sessionStorage.timelocal = JSON.stringify(timelocal)
+}
+
+if(sessionStorage.contavitfacil==null){
+    sessionStorage.setItem("contavitfacil",'')
+}
+if(sessionStorage.contavitfacil){
+    contavitf = parseInt(sessionStorage.getItem('contavitfacil'))
+}
+
+if(sessionStorage.contavitmedio==null){
+    sessionStorage.setItem("contavitmedio",'')
+}
+if(sessionStorage.contavitmedio){
+    contavitm = parseInt(sessionStorage.getItem('contavitmedio'))
+}
+
+if(sessionStorage.contavitdificil==null){
+    sessionStorage.setItem("contavitdificil",'')
+}
+if(sessionStorage.contavitdificil){
+    contavitd = parseInt(sessionStorage.getItem('contavitdificil'))
+}
+
+if(sessionStorage.contagol==null){
+    sessionStorage.setItem("contagol",'0')
+}
+if(sessionStorage.contagol){
+    contagol = parseInt(sessionStorage.getItem('contagol'))
+}
+
+if(sessionStorage.quests == null){
+    sessionStorage.setItem("quests",``)
+}if(sessionStorage.quests){
+    questsplayer = JSON.parse(sessionStorage.getItem('quests'))
 }

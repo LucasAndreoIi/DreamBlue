@@ -493,10 +493,10 @@ document.getElementById("compraepico").addEventListener("click", function(){
 document.getElementById("compralendario").addEventListener("click", function(){
     let moneyplayer = parseFloat(sessionStorage.getItem("money"))
     let packotes = pacotesjogador.length
-    if(moneyplayer>=5000){
+    if(moneyplayer>=2500){
         for(let u = 0;u<=packotes;u++){
             if(pacotesjogador[u]==''){
-                moneyplayer = moneyplayer - 5000;
+                moneyplayer = moneyplayer - 2500;
                 sessionStorage.setItem("money",moneyplayer)  
                 pacotesjogador[u] = `<img src="img/pacotes/pack5.png" id="packcomprado${u}">`
                 sessionStorage.playerpacks = JSON.stringify(pacotesjogador)

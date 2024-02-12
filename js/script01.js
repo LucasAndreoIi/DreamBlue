@@ -83,6 +83,8 @@ let dificuldade = 5;
 let profilefoto = sessionStorage.getItem("fotojogador")
 document.getElementById("profilepic").src = profilefoto;
 
+let golsplayer = parseInt(sessionStorage.getItem("contagol"))
+
 //FIM DOS *SISTEMAS GERAIS*
 
 //SISTEMA *NOME DE TIME*
@@ -487,9 +489,19 @@ document.getElementById("init").addEventListener("click", function(){
     
                 if(golsal>golsop){
                     pontuacao = `Vitória`
-                    dinheiro = (parseInt(Math.random() * 20))+((dificuldade*2)*golsal)+10
+                    dinheiro = (parseInt(Math.random() * 20))+((dificuldade*3)*golsal)+15
                     playerwins ++
                     sessionStorage.setItem("wins",playerwins)
+                    if(dificuldade==0){
+                        contavitf ++
+                        sessionStorage.setItem("contavitfacil",`${contavitf}`)
+                    }else if(dificuldade==2){
+                        contavitm ++
+                        sessionStorage.setItem("contavitmedio",`${contavitm}`)
+                    }else if(dificuldade==3){
+                        contavitd ++
+                        sessionStorage.setItem("contavitdificil",`${contavitd}`)
+                    }
                 }else if(golsal<golsop){
                     pontuacao = `Derrota`
                     dinheiro = (parseInt(Math.random() * 10))+(dificuldade*golsal)+5
@@ -498,6 +510,8 @@ document.getElementById("init").addEventListener("click", function(){
                 }else{
                     dinheiro = (parseInt(Math.random() * 15)+10)
                 }
+                golsplayer += golsal
+                sessionStorage.setItem("contagol",`${golsplayer}`)
                 let dinheiros = parseInt(sessionStorage.getItem('money'))
                 dinheiros += dinheiro
                 sessionStorage.setItem("money",`${dinheiros}`)
