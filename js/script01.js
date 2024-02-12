@@ -346,7 +346,7 @@ document.getElementById("init").addEventListener("click", function(){
                     }
                 }
     
-                if(timealiado[0]==timeinimigo[0]&&timealiado[1]==timeinimigo[1]&&timealiado[2]==timeinimigo[2]&&timealiado[3]==timeinimigo[3]&&timealiado[0]==timeinimigo[0]){
+                if(timealiado[0]==timeinimigo[0]&&timealiado[1]==timeinimigo[1]&&timealiado[2]==timeinimigo[2]&&timealiado[3]==timeinimigo[3]&&timealiado[4]==timeinimigo[4]){
                     pontuacao = `Empate!`
                 }else{
                     while(golsop < 5 || golsal < 5){
