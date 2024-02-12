@@ -27,7 +27,7 @@ let characterstats = [20,30,60,80,90,110];
 let zagctype = [`velocidade`,`forca`,`forca`,`velocidade`,`tecnica`,`forca`];
 let zagbtype = [`forca`,`tecnica`,`forca`,`forca`,`velocidade`,`velocidade`];
 let latctype = [`tecnica`,`forca`,`velocidade`,`tecnica`,`forca`,`tecnica`];
-let latbtype = [`tecnica`,`tecnica`,`velocidade`,`tecnica`,`tecnica`,`forca`];
+let latbtype = [`tecnica`,`tecnica`,`velocidade`,`tecnica`,`velocidade`,`forca`];
 let aatype = [`forca`,`velocidade`,`forca`,`tecnica`,`velocidade`,`tecnica`];
 
 let playerraking = sessionStorage.getItem("ranking");
