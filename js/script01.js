@@ -517,7 +517,7 @@ document.getElementById("init").addEventListener("click", function(){
                         }
                     }
                     if(questsplayer[10]==null){
-                        if(latclocal == 3 && aalocal == 3){
+                        if(latclocal == 3 && aalocal == 3 && latblocal ==2){
                             questsplayer[10] = `ok`
                             sessionStorage.quests = JSON.stringify(questsplayer)
                             alert("Quest Completa!")
@@ -540,6 +540,12 @@ document.getElementById("init").addEventListener("click", function(){
                     if(questsplayer[13]==null){
                         if(tecal>=2){
                             questsplayer[13] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }if(questsplayer[14]==null){
+                        if(aalocal==2 && zagblocal==2 && zagclocal==2){
+                            questsplayer[14] = `ok`
                             sessionStorage.quests = JSON.stringify(questsplayer)
                             alert("Quest Completa!")
                         }

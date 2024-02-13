@@ -22,37 +22,9 @@ document.getElementById("questsec").innerHTML=`
 <p>Vença 10 partidas no fácil ${contavitf}/10</p>
 <button id="quest2">Completar</button>
 </div>
-<div id="missao3" class="quest medio">
-<p>Vença 10 partidas no médio ${contavitm}/10</p>
-<button id="quest3">Completar</button>
-</div>
-<div id="missao4" class="quest dificil">
-<p>Vença 10 partidas no difícil ${contavitd}/10</p>
-<button id="quest4">Completar</button>
-</div>
 <div id="missao5" class="quest facil">
 <p>Marque 10 gols ${contagol}/10</p>
 <button id="quest5">Completar</button>
-</div>
-<div id="missao6" class="quest medio">
-<p>Marque 100 gols ${contagol}/100</p>
-<button id="quest6">Completar</button>
-</div>
-<div id="missao7" class="quest dificil">
-<p>Marque 1000 gols ${contagol}/1000</p>
-<button id="quest7">Completar</button>
-</div>
-<div id="missao8" class="quest dificil">
-<p>Ganhe com Kunigami e Shidou na equipe</p>
-<button id="quest8">Completar</button>
-</div>
-<div id="missao9" class="quest dificil">
-<p>Ganhe com Karasu e Otoya na equipe</p>
-<button id="quest9">Completar</button>
-</div>
-<div id="missao10" class="quest medio">
-<p>Ganhe com Nagi e Reo na equipe</p>
-<button id="quest10">Completar</button>
 </div>
 <div id="missao11" class="quest facil">
 <p>Ganhe com 3 jogadores "Velocidade"</p>
@@ -65,7 +37,40 @@ document.getElementById("questsec").innerHTML=`
 <div id="missao13" class="quest facil">
 <p>Ganhe com 3 jogadores "Técnica"</p>
 <button id="quest13">Completar</button>
-</div>`
+</div>
+<div id="missao14" class="quest facil">
+<p>Ganhe com o trio <span textcaixa="Akira Endoji, Jingo Raichi, Kunigami ">força absoluta</span></p>
+<button id="quest10">Completar</button>
+</div>
+<div id="missao3" class="quest medio">
+<p>Vença 10 partidas no médio ${contavitm}/10</p>
+<button id="quest3">Completar</button>
+</div>
+<div id="missao6" class="quest medio">
+<p>Marque 100 gols ${contagol}/100</p>
+<button id="quest6">Completar</button>
+</div>
+<div id="missao10" class="quest medio">
+<p>Ganhe com o <span textcaixa="Reo Mikage, Seishiro Nagi, Zantetsu Tsurugi">Time V</span></p>
+<button id="quest10">Completar</button>
+</div>
+<div id="missao4" class="quest dificil">
+<p>Vença 10 partidas no difícil ${contavitd}/10</p>
+<button id="quest4">Completar</button>
+</div>
+<div id="missao7" class="quest dificil">
+<p>Marque 1000 gols ${contagol}/1000</p>
+<button id="quest7">Completar</button>
+</div>
+<div id="missao8" class="quest dificil">
+<p>Ganhe com o <span textcaixa="Kunigami">Herói</span> e o <span textcaixa="Ryusei Shido">Vilão</span> na equipe</p>
+<button id="quest8">Completar</button>
+</div>
+<div id="missao9" class="quest dificil">
+<p>Ganhe com o <span textcaixa="Karasu Tabito">Corvo</span> e o <span textcaixa="Otoya Eita">Ninja</span> na equipe</p>
+<button id="quest9">Completar</button>
+</div>
+`
 
 contaquest()
 
@@ -172,11 +177,11 @@ document.getElementById("quest9").addEventListener("click", function(){
 
 document.getElementById("quest10").addEventListener("click", function(){
     if(questsplayer[10]==`ok`){
-        contagrana += 1000
+        contagrana += 1200
         sessionStorage.setItem("money",`${contagrana}`)
         questsplayer[10] = `complete`
         sessionStorage.quests = JSON.stringify(questsplayer)
-        alert("Você ganhou 1000 moedas!")
+        alert("Você ganhou 1200 moedas!")
         contaquest()
     }
 })
@@ -210,6 +215,17 @@ document.getElementById("quest13").addEventListener("click", function(){
         questsplayer[13] = `complete`
         sessionStorage.quests = JSON.stringify(questsplayer)
         alert("Você ganhou 300 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest14").addEventListener("click", function(){
+    if(questsplayer[14]==`ok`){
+        contagrana += 500
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[14] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 500 moedas!")
         contaquest()
     }
 })
