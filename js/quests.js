@@ -135,16 +135,6 @@ document.getElementById("quest7").addEventListener("click", function(){
     }
 })
 
-document.getElementById("quest7").addEventListener("click", function(){
-    if(contagol>=1000){
-        contagrana += 2500
-        sessionStorage.setItem("money",`${contagrana}`)
-        questsplayer[7] = `complete`
-        sessionStorage.quests = JSON.stringify(questsplayer)
-        alert("Você ganhou 2500 moedas!")
-        contaquest()
-    }
-})
 
 document.getElementById("quest8").addEventListener("click", function(){
     if(questsplayer[8]==`ok`){
