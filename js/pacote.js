@@ -512,5 +512,72 @@ document.getElementById("compralendario").addEventListener("click", function(){
     }
 })
 
-
-
+function mostracomum(){
+    document.getElementById("packjogador").innerHTML=`
+    <h3>Chances do pacote COMUM:</h3>
+    <p class="comumpack">Comum</p>
+    <p class="incomumpack">Incomum</p>
+    <p class="raropack">Raro</p>
+    <img src="img/pacotes/pack1.png"  class="mostrapack ">
+    <img src="img/pacotes/pack2.png"  class="mostrapack">
+    <img src="img/pacotes/pack3.png" class="mostrapack">
+    <h4 class="comumpack">50%</h4>
+    <h4 class="incomumpack">45%</h4>
+    <h4 class="raropack">5%</h4>`
+}
+function mostraincomum(){
+    document.getElementById("packjogador").innerHTML=`
+    <h3>Chances do pacote INCOMUM:</h3>
+    <p class="comumpack">Comum</p>
+    <p class="incomumpack">Incomum</p>
+    <p class="raropack">Raro</p>
+    <img src="img/pacotes/pack1.png"  class="mostrapack ">
+    <img src="img/pacotes/pack2.png"  class="mostrapack">
+    <img src="img/pacotes/pack3.png" class="mostrapack">
+    <h4 class="comumpack">10%</h4>
+    <h4 class="incomumpack">70%</h4>
+    <h4 class="raropack">20%</h4>`
+}
+function mostrararo(){
+    document.getElementById("packjogador").innerHTML=`
+    <h3>Chances do pacote RARO:</h3>
+    <p class="incomumpack">Incomum</p>
+    <p class="raropack">Raro</p>
+    <p class="epicopack">Épico</p>
+    <img src="img/pacotes/pack2.png" class="mostrapack ">
+    <img src="img/pacotes/pack3.png" class="mostrapack">
+    <img src="img/pacotes/pack4.png" class="mostrapack">
+    <h4 class="incomumpack">20%</h4>
+    <h4 class="raropack">65%</h4>
+    <h4 class="epicopack">15%</h4>`
+}
+function mostraepico(){
+    document.getElementById("packjogador").innerHTML=`
+    <h3>Chances do pacote ÉPICO:</h3>
+    <p class="raropack">Raro</p>
+    <p class="epicopack">Épico</p>
+    <p class="lendariopack">Lendário</p>
+    <img src="img/pacotes/pack3.png" class="mostrapack ">
+    <img src="img/pacotes/pack4.png"  class="mostrapack">
+    <img src="img/pacotes/pack5.png" class="mostrapack">
+    <h4 class="raropack">20%</h4>
+    <h4 class="epicopack">65%</h4>
+    <h4 class="lendariopack">15%</h4>`
+}
+function mostralendario(){
+    document.getElementById("packjogador").innerHTML=`
+    <h3>Chances do pacote LENDÁRIO:</h3>
+    <p class="epicopack">Épico</p>
+    <p class="lendariopack">Lendário</p>
+    <p class="miticopack">Mítico</p>
+    <img src="img/pacotes/pack4.png"  class="mostrapack ">
+    <img src="img/pacotes/pack5.png"  class="mostrapack">
+    <img src="img/pacotes/pack6.png" class="mostrapack">
+    <h4 class="epicopack">20%</h4>
+    <h4 class="lendariopack">65%</h4>
+    <h4 class="miticopack">15%</h4>`
+}
+function limpacaixa(){
+    document.getElementById("packjogador").innerHTML=`
+    `
+}

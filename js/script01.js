@@ -502,6 +502,27 @@ document.getElementById("init").addEventListener("click", function(){
                         contavitd ++
                         sessionStorage.setItem("contavitdificil",`${contavitd}`)
                     }
+                    if(questsplayer[8]==null){
+                        if(aalocal == 2 && latblocal == 4){
+                            questsplayer[8] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
+                    if(questsplayer[9]==null){
+                        if(zagblocal == 4 && zagclocal == 4){
+                            questsplayer[9] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
+                    if(questsplayer[10]==null){
+                        if(latclocal == 3 && aalocal == 3){
+                            questsplayer[10] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
                 }else if(golsal<golsop){
                     pontuacao = `Derrota`
                     dinheiro = (parseInt(Math.random() * 10))+(dificuldade*golsal)+5
@@ -562,7 +583,6 @@ document.getElementById("init").addEventListener("click", function(){
             })
         })
     }
-    dificuldade = 5
 })
 
 //FIM DO *SISTEMA BOTÕES DE PARTIDA*

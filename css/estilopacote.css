@@ -71,50 +71,33 @@
     height: 100%;
     width: 60%;
     justify-content: space-around;
-    padding: 5%;
+    text-align: center;
+    padding: 3%;
     display: inline-block;
     color: rgb(97, 21, 21);
 }
 
 #packjogador img{
-    width: 20%;
+    width: 10vw;
 }
 
-#packcomprado0{
-    transition: 0.5s;
-    width: 30%;
+#packjogador p{
     float: left;
-    margin-left:6.5%;
+    width: 33%;
+    font-size: 2vw;   
 }
-
-#packcomprado0:hover{
-    cursor: pointer;
-    transform: scale(1.1,1.1);
-}
-
-#packcomprado1{
-    transition: 0.5s;
-    width: 30%;
+#packjogador h4{
     float: left;
-    margin-left:6.5%;
+    width: 33%;
+    font-size: 3vh;   
 }
 
-#packcomprado1:hover{
-    cursor: pointer;
-    transform: scale(1.1,1.1);
+
+.mostrapack{
+    margin-left:5%;
+    margin-right:5%;
 }
 
-#packcomprado2{
-    transition: 0.5s;
-    width: 30%;
-    float: left;
-    margin-left:6.5%;
-}
-
-#packcomprado2:hover{
-    cursor: pointer;
-    transform: scale(1.1,1.1);
-}
 
 #packcompradonull{
     width: 25%;
@@ -143,4 +126,23 @@
     color: whitesmoke;
     font-weight: 900;
     font-size: 12pt;
+}
+
+.comumpack{
+    color: rgb(58, 58, 58);
+}
+.incomumpack{
+    color: rgb(9, 77, 9);
+}
+.raropack{
+    color: rgb(12, 12, 85);
+}
+.epicopack{
+    color: rgb(70, 13, 70);
+}
+.lendariopack{
+    color: rgb(221, 161, 49);
+}
+.miticopack{
+    color: rgb(122, 29, 29);
 }

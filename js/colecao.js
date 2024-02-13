@@ -5,6 +5,92 @@ let timejogador = JSON.parse(sessionStorage.timeplayer);
 let timel = JSON.parse(sessionStorage.timelocal);
 let atualplayer = 7;
 let atuallocal = 7;
+let clt = [`velocidade`,`tecnica`,`forca`,`nenhuma`];
+
+
+function mostratime(){
+    for(let p = 0;p<=4;p++){
+        if(p==0){
+            document.getElementById(`player${p}`).src= zagclist[timel[p]]
+            if(zagctype[timel[p]]==`velocidade`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('velocidade');
+            }
+            if(zagctype[timel[p]]==`tecnica`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('tecnica');
+            }
+            if(zagctype[timel[p]]==`forca`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('forca');
+            }
+        }
+        if(p==1){
+            document.getElementById(`player${p}`).src= latclist[timel[p]]
+            if(latctype[timel[p]]==`velocidade`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('velocidade');
+            }
+            if(latctype[timel[p]]==`tecnica`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('tecnica');
+            }
+            if(latctype[timel[p]]==`forca`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('forca');
+            }
+        }
+        if(p==2){
+            document.getElementById(`player${p}`).src= aalist[timel[p]]
+            if(aatype[timel[p]]==`velocidade`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('velocidade');
+            }
+            if(aatype[timel[p]]==`tecnica`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('tecnica');
+            }
+            if(aatype[timel[p]]==`forca`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('forca');
+            }
+        }
+        if(p==3){
+            document.getElementById(`player${p}`).src= latblist[timel[p]]
+            if(latbtype[timel[p]]==`velocidade`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('velocidade');
+            }
+            if(latbtype[timel[p]]==`tecnica`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('tecnica');
+            }
+            if(latbtype[timel[p]]==`forca`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('forca');
+            }
+        }
+        if(p==4){
+            document.getElementById(`player${p}`).src= zagblist[timel[p]]
+            if(zagbtype[timel[p]]==`velocidade`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('velocidade');
+            }
+            if(zagbtype[timel[p]]==`tecnica`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('tecnica');
+            }
+            if(zagbtype[timel[p]]==`forca`){
+                document.getElementById(`player${p}`).classList.remove(...clt)
+                document.getElementById(`player${p}`).classList.add('forca');
+            }
+        }
+    }
+}
+
+mostratime();
+
+
 //TODOS BOTÕES DA COLEÇÃO
 
 //Jogadores Comuns
@@ -615,9 +701,15 @@ document.getElementById("eqpbutton").addEventListener("click", function(){
     }if(atualplayer == 4){
         sessionStorage.timeplayer = JSON.stringify(timejogador)
     }
+    mostratime();
 })
 
 document.getElementById("iconeplayer").addEventListener("click", function(){
     let iconeescolha = document.getElementById("cardphoto").src
-    sessionStorage.setItem("fotojogador", iconeescolha)
+    if(cardname.innerHTML== `Selecione um card`){
+        alert("Escolha um jogador!")
+    }
+    else{
+        sessionStorage.setItem("fotojogador", iconeescolha)
+    }
 })

@@ -3,7 +3,7 @@ let contagrana = parseFloat(sessionStorage.getItem("money"))
 
 
 function contaquest(){
-    for(let i=0;i<=10;i++){
+    for(let i=0;i<=20;i++){
         if(questsplayer[i]==`complete`){
             document.getElementById(`missao${i}`).classList.remove("quest")
             document.getElementById(`missao${i}`).classList.add('questcomplete');
@@ -41,6 +41,18 @@ document.getElementById("questsec").innerHTML=`
 <div id="missao7" class="quest dificil">
 <p>Marque 1000 gols ${contagol}/1000</p>
 <button id="quest7">Completar</button>
+</div>
+<div id="missao8" class="quest dificil">
+<p>Ganhe com Kunigami e Shidou na equipe</p>
+<button id="quest8">Completar</button>
+</div>
+<div id="missao9" class="quest dificil">
+<p>Ganhe com Karasu e Otoya na equipe</p>
+<button id="quest9">Completar</button>
+</div>
+<div id="missao10" class="quest medio">
+<p>Ganhe com Nagi e Reo na equipe</p>
+<button id="quest10">Completar</button>
 </div>`
 
 contaquest()
@@ -119,6 +131,50 @@ document.getElementById("quest7").addEventListener("click", function(){
         questsplayer[7] = `complete`
         sessionStorage.quests = JSON.stringify(questsplayer)
         alert("Você ganhou 2500 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest7").addEventListener("click", function(){
+    if(contagol>=1000){
+        contagrana += 2500
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[7] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 2500 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest8").addEventListener("click", function(){
+    if(questsplayer[8]==`ok`){
+        contagrana += 1500
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[8] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 1500 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest9").addEventListener("click", function(){
+    if(questsplayer[9]==`ok`){
+        contagrana += 2000
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[9] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 2000 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest10").addEventListener("click", function(){
+    if(questsplayer[10]==`ok`){
+        contagrana += 1000
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[10] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 1000 moedas!")
         contaquest()
     }
 })
