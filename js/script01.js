@@ -523,6 +523,27 @@ document.getElementById("init").addEventListener("click", function(){
                             alert("Quest Completa!")
                         }
                     }
+                    if(questsplayer[11]==null){
+                        if(velal >= 2.0){
+                            questsplayer[11] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
+                    if(questsplayer[12]==null){
+                        if(foral>=2){
+                            questsplayer[12] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
+                    if(questsplayer[13]==null){
+                        if(tecal>=2){
+                            questsplayer[13] = `ok`
+                            sessionStorage.quests = JSON.stringify(questsplayer)
+                            alert("Quest Completa!")
+                        }
+                    }
                 }else if(golsal<golsop){
                     pontuacao = `Derrota`
                     dinheiro = (parseInt(Math.random() * 10))+(dificuldade*golsal)+5

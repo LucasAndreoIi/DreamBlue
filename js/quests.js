@@ -53,6 +53,18 @@ document.getElementById("questsec").innerHTML=`
 <div id="missao10" class="quest medio">
 <p>Ganhe com Nagi e Reo na equipe</p>
 <button id="quest10">Completar</button>
+</div>
+<div id="missao11" class="quest facil">
+<p>Ganhe com 3 jogadores "Velocidade"</p>
+<button id="quest11">Completar</button>
+</div>
+<div id="missao12" class="quest facil">
+<p>Ganhe com 3 jogadores "Força"</p>
+<button id="quest12">Completar</button>
+</div>
+<div id="missao13" class="quest facil">
+<p>Ganhe com 3 jogadores "Técnica"</p>
+<button id="quest13">Completar</button>
 </div>`
 
 contaquest()
@@ -165,6 +177,39 @@ document.getElementById("quest10").addEventListener("click", function(){
         questsplayer[10] = `complete`
         sessionStorage.quests = JSON.stringify(questsplayer)
         alert("Você ganhou 1000 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest11").addEventListener("click", function(){
+    if(questsplayer[11]==`ok`){
+        contagrana += 300
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[11] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 300 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest12").addEventListener("click", function(){
+    if(questsplayer[12]==`ok`){
+        contagrana += 300
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[12] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 300 moedas!")
+        contaquest()
+    }
+})
+
+document.getElementById("quest13").addEventListener("click", function(){
+    if(questsplayer[13]==`ok`){
+        contagrana += 300
+        sessionStorage.setItem("money",`${contagrana}`)
+        questsplayer[13] = `complete`
+        sessionStorage.quests = JSON.stringify(questsplayer)
+        alert("Você ganhou 300 moedas!")
         contaquest()
     }
 })
