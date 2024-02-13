@@ -124,14 +124,16 @@ footer{
     background-image: url("../img/campo2.png");
     background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    min-width: 100%;
     max-height: 980px;
     margin: auto;
     display: block;
     margin-bottom: 20px;
 }
+
 
 #campocima{
     width: 100%;
@@ -212,6 +214,21 @@ footer{
         justify-content: space-around;
     }
 } 
+
+@media (min-width: 1700px){
+    #campocima{
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    #campomeio{
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    #campobaixo{
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+}
 
 #secao2{
     float: left;
