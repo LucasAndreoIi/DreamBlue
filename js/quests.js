@@ -40,7 +40,7 @@ document.getElementById("questsec").innerHTML=`
 </div>
 <div id="missao14" class="quest facil">
 <p>Ganhe com o trio <span textcaixa="Akira Endoji, Jingo Raichi, Kunigami ">força absoluta</span></p>
-<button id="quest10">Completar</button>
+<button id="quest14">Completar</button>
 </div>
 <div id="missao3" class="quest medio">
 <p>Vença 10 partidas no médio ${contavitm}/10</p>
