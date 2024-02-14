@@ -610,6 +610,7 @@ document.getElementById("init").addEventListener("click", function(){
             })
         })
     }
+    dificuldade = 5
 })
 
 //FIM DO *SISTEMA BOTÕES DE PARTIDA*
