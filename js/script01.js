@@ -139,6 +139,7 @@ document.getElementById("init").addEventListener("click", function(){
     let timeinimigo= [];
     let pontuacao = ``;
     let dinheiro = 0;
+    let entrosa =``;
     if(dificuldade == 5){
         alert("Escolha uma dificuldade")
     }else{
@@ -577,6 +578,11 @@ document.getElementById("init").addEventListener("click", function(){
                     mvpname = zagbnome[achamvp]
                 }else{
                 }
+                if(golsal>0){
+                    entrosa = `${mvpname} ${golsmvp} Gols`
+                }else{
+                    entrosa = `Seu time não marcou.`
+                }
             }
         }
         document.getElementById("calcs").innerHTML = `
@@ -585,7 +591,7 @@ document.getElementById("init").addEventListener("click", function(){
         document.getElementById("placar").innerHTML= `${golsal}x${golsop}`
         document.getElementById("results").innerHTML= `
         <p>Resultado:</p><p id="score">${pontuacao}</p><br>
-        <p>MVP:</p><p id="entrosamento">${mvpname} ${golsmvp} Gols</p><br>
+        <p>MVP:</p><p id="entrosamento">${entrosa}</p><br>
         <p>Reputação:</p><p id="rep">???</p><br>
         <p>Ganhos:</p><p id="cashmatch">${dinheiro}</p><br>
         <a href="#mainindex"><button id="conc" class="botoes">Concluir</button></a>`

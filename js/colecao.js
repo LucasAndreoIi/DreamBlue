@@ -3,6 +3,8 @@
 //
 let timejogador = JSON.parse(sessionStorage.timeplayer);
 let timel = JSON.parse(sessionStorage.timelocal);
+let timereserva = JSON.parse(sessionStorage.timereserva)
+let timereserval = JSON.parse(sessionStorage.timereserval)
 let atualplayer = 7;
 let atuallocal = 7;
 let clt = [`velocidade`,`tecnica`,`forca`,`nenhuma`];
@@ -87,8 +89,87 @@ function mostratime(){
         }
     }
 }
+function mostratimere(){
+        if(timereserval[0]!=null){
+            document.getElementById(`playerr${0}`).src= zagclist[timereserval[0]]
+            if(zagctype[timereserval[0]]==`velocidade`){
+                document.getElementById(`playerr${0}`).classList.remove(...clt)
+                document.getElementById(`playerr${0}`).classList.add('velocidade');
+            }
+            if(zagctype[timereserval[0]]==`tecnica`){
+                document.getElementById(`playerr${0}`).classList.remove(...clt)
+                document.getElementById(`playerr${0}`).classList.add('tecnica');
+            }
+            if(zagctype[timereserval[0]]==`forca`){
+                document.getElementById(`playerr${0}`).classList.remove(...clt)
+                document.getElementById(`playerr${0}`).classList.add('forca');
+            }
+        }
+        if(timereserval[1]!=null){
+            document.getElementById(`playerr${1}`).src= latclist[timereserval[1]]
+            if(latctype[timereserval[1]]==`velocidade`){
+                document.getElementById(`playerr${1}`).classList.remove(...clt)
+                document.getElementById(`playerr${1}`).classList.add('velocidade');
+            }
+            if(latctype[timereserval[1]]==`tecnica`){
+                document.getElementById(`playerr${1}`).classList.remove(...clt)
+                document.getElementById(`playerr${1}`).classList.add('tecnica');
+            }
+            if(latctype[timereserval[1]]==`forca`){
+                document.getElementById(`playerr${1}`).classList.remove(...clt)
+                document.getElementById(`playerr${1}`).classList.add('forca');
+            }
+        }
+        if(timereserval[2]!=null){
+            document.getElementById(`playerr${2}`).src= aalist[timereserval[2]]
+            if(aatype[timereserval[2]]==`velocidade`){
+                document.getElementById(`playerr${2}`).classList.remove(...clt)
+                document.getElementById(`playerr${2}`).classList.add('velocidade');
+            }
+            if(aatype[timereserval[2]]==`tecnica`){
+                document.getElementById(`playerr${2}`).classList.remove(...clt)
+                document.getElementById(`playerr${2}`).classList.add('tecnica');
+            }
+            if(aatype[timereserval[2]]==`forca`){
+                document.getElementById(`playerr${2}`).classList.remove(...clt)
+                document.getElementById(`playerr${2}`).classList.add('forca');
+            }
+        }
+        if(timereserval[3]!=null){
+            document.getElementById(`playerr${3}`).src= latblist[timereserval[3]]
+            if(latbtype[timereserval[3]]==`velocidade`){
+                document.getElementById(`playerr${3}`).classList.remove(...clt)
+                document.getElementById(`playerr${3}`).classList.add('velocidade');
+            }
+            if(latbtype[timereserval[3]]==`tecnica`){
+                document.getElementById(`playerr${3}`).classList.remove(...clt)
+                document.getElementById(`playerr${3}`).classList.add('tecnica');
+            }
+            if(latbtype[timereserval[3]]==`forca`){
+                document.getElementById(`playerr${3}`).classList.remove(...clt)
+                document.getElementById(`playerr${3}`).classList.add('forca');
+            }
+        }
+        if(timereserval[4]!=null){
+            document.getElementById(`playerr${4}`).src= zagblist[timereserval[4]]
+            if(zagbtype[timereserval[4]]==`velocidade`){
+                document.getElementById(`playerr${4}`).classList.remove(...clt)
+                document.getElementById(`playerr${4}`).classList.add('velocidade');
+            }
+            if(zagbtype[timereserval[4]]==`tecnica`){
+                document.getElementById(`playerr${4}`).classList.remove(...clt)
+                document.getElementById(`playerr${4}`).classList.add('tecnica');
+            }
+            if(zagbtype[timereserval[4]]==`forca`){
+                document.getElementById(`playerr${4}`).classList.remove(...clt)
+                document.getElementById(`playerr${4}`).classList.add('forca');
+            }
+        }
+
+}
 
 mostratime();
+mostratimere()
 
 
 //TODOS BOTÕES DA COLEÇÃO
@@ -686,22 +767,26 @@ if(contacardm[4] == `img/jogadores/latbm.png`){
 //botões
 
 document.getElementById("eqpbutton").addEventListener("click", function(){
-    let cartaescolha = document.getElementById("cardphoto").src
-    timejogador[atualplayer] = cartaescolha
-    timel[atualplayer] = atuallocal
-    sessionStorage.timelocal = JSON.stringify(timel)
-    if(atualplayer == 0){
-        sessionStorage.timeplayer = JSON.stringify(timejogador)
-    }if(atualplayer == 1){
-        sessionStorage.timeplayer = JSON.stringify(timejogador)
-    }if(atualplayer == 2){
-        sessionStorage.timeplayer = JSON.stringify(timejogador)
-    }if(atualplayer == 3){
-        sessionStorage.timeplayer = JSON.stringify(timejogador)
-    }if(atualplayer == 4){
-        sessionStorage.timeplayer = JSON.stringify(timejogador)
+    if(timereserval[atualplayer] == atuallocal){
+        alert("Jogador na reserva")
+    }else{
+        let cartaescolha = document.getElementById("cardphoto").src
+        timejogador[atualplayer] = cartaescolha
+        timel[atualplayer] = atuallocal
+        sessionStorage.timelocal = JSON.stringify(timel)
+        if(atualplayer == 0){
+            sessionStorage.timeplayer = JSON.stringify(timejogador)
+        }if(atualplayer == 1){
+            sessionStorage.timeplayer = JSON.stringify(timejogador)
+        }if(atualplayer == 2){
+            sessionStorage.timeplayer = JSON.stringify(timejogador)
+        }if(atualplayer == 3){
+            sessionStorage.timeplayer = JSON.stringify(timejogador)
+        }if(atualplayer == 4){
+            sessionStorage.timeplayer = JSON.stringify(timejogador)
+        }
+        mostratime();
     }
-    mostratime();
 })
 
 document.getElementById("iconeplayer").addEventListener("click", function(){
@@ -712,4 +797,82 @@ document.getElementById("iconeplayer").addEventListener("click", function(){
     else{
         sessionStorage.setItem("fotojogador", iconeescolha)
     }
+})
+
+document.getElementById("reservabtn").addEventListener("click", function(){
+    if(timel[atualplayer] == atuallocal){
+        alert("Jogador já selecionado como titular")
+    }else{
+        let cartaescolha = document.getElementById("cardphoto").src
+        timereserva[atualplayer] = cartaescolha
+        timereserval[atualplayer] = atuallocal
+        sessionStorage.timereserval = JSON.stringify(timereserval)
+        if(atualplayer == 0){
+            sessionStorage.timereserva = JSON.stringify(timereserva)
+        }if(atualplayer == 1){
+            sessionStorage.timereserva = JSON.stringify(timereserva)
+        }if(atualplayer == 2){
+            sessionStorage.timereserva = JSON.stringify(timereserva)
+        }if(atualplayer == 3){
+            sessionStorage.timereserva = JSON.stringify(timereserva)
+        }if(atualplayer == 4){
+            sessionStorage.timereserva = JSON.stringify(timereserva)
+        }
+        mostratimere();
+    }
+})
+
+document.getElementById("playerr0").addEventListener("click", function(){
+    timereserva[0] = ``;
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+    timereserval[0] = null;
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+    document.getElementById(`playerr0`).src= "img/icones/interroga.png"
+    document.getElementById(`playerr0`).classList.remove(...clt)
+    document.getElementById(`playerr0`).classList.add('nenhuma');
+    mostratimere();
+})
+
+document.getElementById("playerr1").addEventListener("click", function(){
+    timereserva[1] = ``;
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+    timereserval[1] = null;
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+    document.getElementById(`playerr1`).src= "img/icones/interroga.png"
+    document.getElementById(`playerr1`).classList.remove(...clt)
+    document.getElementById(`playerr1`).classList.add('nenhuma');
+    mostratimere();
+})
+
+document.getElementById("playerr2").addEventListener("click", function(){
+    timereserva[2] = ``;
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+    timereserval[2] = null;
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+    document.getElementById(`playerr2`).src= "img/icones/interroga.png"
+    document.getElementById(`playerr2`).classList.remove(...clt)
+    document.getElementById(`playerr2`).classList.add('nenhuma');
+    mostratimere();
+})
+
+document.getElementById("playerr3").addEventListener("click", function(){
+    timereserva[3] = ``;
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+    timereserval[3] = null;
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+    document.getElementById(`playerr3`).src= "img/icones/interroga.png"
+    document.getElementById(`playerr3`).classList.remove(...clt)
+    document.getElementById(`playerr3`).classList.add('nenhuma');
+    mostratimere();
+})
+
+document.getElementById("playerr4").addEventListener("click", function(){
+    timereserva[4] = ``;
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+    timereserval[4] = null;
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+    document.getElementById(`playerr4`).src= "img/icones/interroga.png"
+    document.getElementById(`playerr4`).classList.remove(...clt)
+    document.getElementById(`playerr4`).classList.add('nenhuma');
+    mostratimere();
 })

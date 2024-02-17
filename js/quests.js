@@ -39,7 +39,7 @@ document.getElementById("questsec").innerHTML=`
 <button id="quest13">Completar</button>
 </div>
 <div id="missao14" class="quest facil">
-<p>Ganhe com o trio <span textcaixa="Akira Endoji, Jingo Raichi, Kunigami ">força absoluta</span></p>
+<p>Ganhe com o trio <span textcaixa="Akira Endoji, Jingo Raichi, Kunigami ">força total</span></p>
 <button id="quest14">Completar</button>
 </div>
 <div id="missao3" class="quest medio">

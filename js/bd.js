@@ -116,6 +116,18 @@ if(sessionStorage.timelocal==null){
     sessionStorage.timelocal = JSON.stringify(timelocal)
 }
 
+if(sessionStorage.timereserva==null){
+    sessionStorage.setItem("timereserva","")
+    let timereserva = [``,``,``,``,``]
+    sessionStorage.timereserva = JSON.stringify(timereserva)
+}
+
+if(sessionStorage.timereservalocal==null){
+    sessionStorage.setItem("timereservalocal","")
+    let timereserval = []
+    sessionStorage.timereserval = JSON.stringify(timereserval)
+}
+
 if(sessionStorage.contavitfacil==null){
     sessionStorage.setItem("contavitfacil",'')
 }

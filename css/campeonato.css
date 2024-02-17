@@ -1,0 +1,114 @@
+#maincamp{
+    height: 1000px;
+    text-align: center;
+}
+
+#telaprincipal{
+    margin: auto;
+    margin-top: 5vh;
+    width: 90%;
+    height: 80%;
+    background-color: rgb(138, 95, 31);
+}
+
+#progresso{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    padding: 10px;
+}
+
+#campo2{
+    background-image: url("../img/campo2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 60%;
+    height: 60%;
+    margin-top: 3%;
+    display: inline-block;
+}
+
+
+#reservas{
+    float: right;
+    text-align: center;
+    height: 70%;
+    width: 30%;
+    background-color: antiquewhite;
+}
+
+#placares{
+    background-color: blue;
+    float: left;
+    height: 20%;
+    width: 100%;
+}
+
+#progresso p{
+    font-size: 2vw;
+    float: left;
+    margin-left: 30%;
+}
+
+#reservas p{
+    background-color: rgb(75, 88, 100);
+    height: 8%;
+    font-size: 2vw;
+    color: white;
+    padding: 6px;
+}
+
+#reservas img{
+    display: block;
+    width: 20%;
+    margin: auto;
+    margin-top: 10%;
+    height: 10%;
+}
+
+#reservas img:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    #zagc1, #zagc2, #latc1, #latc2{
+        width: 30px;
+        height: 30px;
+    }
+    
+    #g1, #g2, #aa1, #aa2{
+        width: 30px;
+        height: 30px;
+    }
+    
+    #zagb1, #zagb2, #latb1, #latb2{
+        width: 30px;
+        height: 30px;
+    }
+
+    #campocima{
+        width: 100%;
+        height: 33%;
+        padding: 38px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #campomeio{
+        width: 100%;
+        height: 33%;
+        padding: 38px;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    #campobaixo{
+        width: 100%;
+        height: 33%;
+        padding: 38px;
+        display: flex;
+        justify-content: space-around;
+    }
+} 
